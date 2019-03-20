@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<script>
+			function allowDrop(ev)
+			{
+				ev.preventDefault();
+			}
+			function drag(ev)
+			{
+				ev.dataTransfer.setData("text", ev.target.id);
+			}
+		</script>
 		<title>CSS exercises</title>
 		<style type="text/css">
 			body
@@ -30,11 +40,73 @@
 				/* Top right bottom left*/
 				margin: 0px 0px 0px 25px;
 			}
+			div#square
+			{
+				background-color:#57cefa;
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				border: solid 2px purple;
+				left: 35px;
+				top: 125px;
+				box-shadow: 1px 1px 15px blue				
+			}
+			div#circle
+			{
+				position:absolute;
+				top: 125px;
+				left: 148px;
+				background-color: purple;
+				width: 110px;
+				height: 110px;
+				border-radius:100%;
+				border: outset 3px #57cefa
+			}
+			div#square1
+			{
+				background-color:#57cefa;
+				width: 200px;
+				height: 200px;
+				position: absolute;
+				border: solid 2px purple;
+				left: 35px;
+				top: 300px;
+				box-shadow: 1px 1px 15px blue
+			}
+			div#circle1
+			{
+				position:absolute;
+				top: 301px;
+				left: 37px;
+				background-color: purple;
+				width: 194px;
+				height: 194px;
+				border-radius:100%;
+				border: solid 3px #1bb1de;
+				box-shadow: 1px 1px 15px #ffffff;
+			}
+			div#triangle1
+			{
+				width: 0; 
+  				height: 0; 
+  				border-left: 50px solid transparent;
+  				border-right: 50px solid transparent;
+  				border-bottom: 50px solid gold;
+				position:absolute;
+				top:700px;
+				left:35px;
+			}
 		</style>
 	</head>
 	<body>
 		<h1>CSS  Exercises</h1>
 		<h3>Vol. 1</h3>
+		<div id="square"></div>
+		<div id="circle"></div>
+		<div id ="square1"></div>
+		<div id ="circle1"></div>
+		<div id ="triangle1"></div>
+		<div id ="triangle2"></div>
 	</body>
 	
 </html>
