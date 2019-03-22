@@ -2,14 +2,6 @@
 <html>
 	<head>
 		<script>
-			function allowDrop(ev)
-			{
-				ev.preventDefault();
-			}
-			function drag(ev)
-			{
-				ev.dataTransfer.setData("text", ev.target.id);
-			}
 		</script>
 		<title>CSS exercises</title>
 		<style type="text/css">
@@ -28,6 +20,7 @@
 				margin: 10px 0px 5px 10px;
 				text-shadow: 1px 1px 25px purple;
 				font-weight:lighter;
+				animation: myfirst 5s linear 2s 1 alternate;
 			}
 			h3
 			{
@@ -42,14 +35,15 @@
 			}
 			div#square
 			{
-				background-color:#57cefa;
+				background-color:red;
 				width: 100px;
 				height: 100px;
-				position: absolute;
+				position: relative;
 				border: solid 2px purple;
 				left: 35px;
 				top: 125px;
-				box-shadow: 1px 1px 15px blue				
+				box-shadow: 1px 1px 15px blue;
+				
 			}
 			div#circle
 			{
@@ -60,7 +54,7 @@
 				width: 110px;
 				height: 110px;
 				border-radius:100%;
-				border: outset 3px #57cefa
+				border: outset 3px #57cefa;
 			}
 			div#square1
 			{
@@ -71,7 +65,24 @@
 				border: solid 2px purple;
 				left: 35px;
 				top: 300px;
-				box-shadow: 1px 1px 15px blue
+				box-shadow: 1px 1px 15px blue;
+			}
+			div#square2
+			{
+				background-color:green;
+				width: 200px;
+				height: 150px;
+				position: absolute;
+				left: 34px;
+				top: 630px;
+				transition:2s;
+				
+			}
+			div#square2:hover
+			{
+				transition:2s;
+				box-shadow: 1px 1px 15px blue;
+				
 			}
 			div#circle1
 			{
@@ -94,8 +105,56 @@
   				border-bottom: 50px solid gold;
 				position:absolute;
 				top:700px;
-				left:35px;
+				left:34px;
 			}
+			div#triangle2
+			{
+				width: 0; 
+  				height: 0; 
+  				border-left: 50px solid transparent;
+  				border-right: 50px solid transparent;
+  				border-bottom: 50px solid gold;
+				position:absolute;
+				top:700px;
+				left:132px;
+			}
+			div#triangle3
+			{
+				width: 0; 
+  				height: 0; 
+  				border-left: 50px solid transparent;
+  				border-right: 50px solid transparent;
+  				border-bottom: 50px solid gold;
+				position:absolute;
+				top:651px;
+				left:82.5px;
+			}
+			img#giants
+			{
+				display:block;
+				border-radius: 15%;
+				border: double 1px black;
+				background-color:black;
+				position:absolute;
+				left:700px;
+				z-index: 1;
+				width:300px;
+				height:auto;
+				transition:1.5s;
+			}
+			img#giants:hover
+			{
+				width:450px;
+				box-shadow: 5px 1px 35px blue;
+				background-color: white;
+			}
+			@keyframes myfirst {
+  		0%   {background-color:red; left:0px; top:0px;}
+  		25%  {background-color:yellow; left:200px; top:0px;}
+  		50%  {background-color:blue; left:200px; top:200px;}
+  		75%  {background-color:green; left:0px; top:200px;}
+  		100% {background-color:red; left:0px; top:0px;}
+}
 		</style>
 	</head>
 	<body>
@@ -104,9 +163,12 @@
 		<div id="square"></div>
 		<div id="circle"></div>
 		<div id ="square1"></div>
+		<div id ="square2"></div>
 		<div id ="circle1"></div>
 		<div id ="triangle1"></div>
 		<div id ="triangle2"></div>
+		<div id ="triangle3"></div>
+		<img src="san_francisco_giants.png" id= "giants">
 	</body>
 	
 </html>
