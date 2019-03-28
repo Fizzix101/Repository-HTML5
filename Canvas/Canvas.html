@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<canvas id = "myCanvas" width="1000" height="1000" style="border:3px solid cornflowerblue; background-color: lightgrey">
+		Your browser does not support the canvas element
+		</canvas>
+		<script>
+			var canvas = document.getElementById("myCanvas");
+			var ctx = canvas.getContext("2d");
+			//create a square
+			ctx.fillStyle= "cornflowerblue";
+			ctx.fillRect(0,0,400,400);
+			//create a line
+			ctx.moveTo(0,0);
+			ctx.lineTo(400,400);
+			//create a circle
+			ctx.beginPath();
+			ctx.arc(600,200, 100, 0, 2 * Math.PI );
+			ctx.stroke();
+			//mark the center of the circle
+			ctx.beginPath();
+			ctx.arc(600,200, 1, 0, 2 * Math.PI );
+			//mark the radius on the circle
+			ctx.moveTo(600,200);
+			ctx.lineTo(500,200);
+			ctx.stroke();
+			//create a gradient
+			var grd = ctx.createLinearGradient(30,600, 230, 600);
+			grd.addColorStop(0, "red");
+			grd.addColorStop(1, "white");
+			//fill with gradient
+			ctx.fillStyle = grd;
+			ctx.fillRect(30,400,150,80);
+			//create gradient
+			var radGrd = ctx.createRadialGradient(75,50,5,90,60,100);
+			radGrd.addColorStop(0,"red");
+			radGrd.addColorStop(1,"white");
+			//fill with gradient
+			ctx.fillStyle = radGrd;
+			ctx.fillRect(10,10,150,80);
+			//stroke
+			ctx.stroke();
+			//lable radius r
+			ctx.font = "20px Arial";
+			ctx.fillText("r",550,200);
+		</script>
+	</body>
+</html>
