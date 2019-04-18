@@ -18,3 +18,8 @@ div#container
 	height:800px;
 	background-color:#f8dddd;
 }
+header{
+	width:100%;
+	padding:25px;
+	background-color:#d1f4f4;
+}
