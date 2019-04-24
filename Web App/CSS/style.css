@@ -14,13 +14,12 @@ body
 }
 div#container
 {
-	width:1200px;
-	height:800px;
+	width:100%;
 	background-color:#d6d3f2;
 }
 header
 {
-	width:95.8%;
+	width:auto;
 	padding:25px;
 	background-color:#9c55c3;
 }
@@ -32,7 +31,7 @@ header h1
 }
 div#content
 {
-	width:100%;
+	width:300%;
 	height:34px;
 	background-color:#bcb7eb;
 }
@@ -44,22 +43,52 @@ div h3
 nav
 {
 	width:100%;
-	background-color:#ff003b;
+	background-color:#d6d3f2;
+	color: black;
+	font-family:'OCR A std',sans-serif;
 }
 nav ul
 {
-	display:block;
-	margin:auto;
-	font-family:'OCR A std',sans-serif;
-	font-size:15px;
 	list-style:none;
 }
-nav ul li 
+nav ul li a
 {
 	float:left;
+	display:block;
 	padding: 10px 15px;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	color:black;
+	text-decoration:none;
 }
-.keepopen
+nav ul li a:hover
+{
+	background-color:darkblue;
+	color:white;
+}
+footer
+{
+position:absolute;
+	bottom:0;
+	left:0;
+	width:100%;
+	height:50px;
+	background-color:#a795c9
+}
+div.keepopen
 {
 	clear:both;
+}
+/* when the screen is smaller, change the color*/
+@media screen and (max-width:975px) 
+{
+	div#container 
+	{
+		width:100%;
+	}
+	nav ul li a 
+	{
+		float:none;
+		text-align:center;
+	}
 }
