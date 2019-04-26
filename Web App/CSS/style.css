@@ -40,6 +40,7 @@ div h3
 	font-family:'OCR A std',sans-serif;
 	font-size:24px;
 }
+
 nav
 {
 	width:100%;
@@ -79,7 +80,9 @@ div.keepopen
 {
 	clear:both;
 }
+
 /* when the screen is smaller, change the color*/
+
 @media screen and (max-width:975px) 
 {
 	div#container 
@@ -92,3 +95,33 @@ div.keepopen
 		text-align:center;
 	}
 }
+
+/*
+.icon-bar
+{
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:100%;
+	background-color:aliceblue;
+	overflow:auto;
+}
+.icon-bar a
+{
+	float:left;
+	width:20%;
+	text-align:center;
+	padding: 12px 0;
+	transition:all 0.3s ease;
+	color:#c113c1;
+	font-size:36px;
+}
+.icon-bar a:hover
+{
+background-color:darkblue;	
+}
+.active
+{
+	background-color:white;;
+}
+*/
