@@ -23,11 +23,19 @@ header
 	padding:25px;
 	background-color:#9c55c3;
 }
+header img#appLogo
+{
+	display:block;
+	margin:auto;
+	float:left;
+	width:100px;
+}
 header h1
 {
 	color:white;
 	font-family:'OCR A std',sans-serif;
 	font-size:30px;
+	margin:auto;
 }
 div#content
 {
@@ -79,6 +87,34 @@ position:absolute;
 div.keepopen
 {
 	clear:both;
+}
+div#body
+{
+	background-color:#d1f4f4;
+	font-family:'OCR A std',sans-serif;
+}
+div#body h1
+{
+	width:auto;
+	background-color:#d1f4f4;
+}
+div#body p
+{
+	position:absolute;
+	left: 300px;
+}
+div#body h4
+{
+	position:absolute;
+	top:300px;
+	left:300px;
+}
+
+img#graph
+{
+	position:absolute;
+	width:300px;
+	background-color:transparent;
 }
 
 /* when the screen is smaller, change the color*/
