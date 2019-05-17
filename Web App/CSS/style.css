@@ -87,7 +87,8 @@ position:absolute;
 }
 div.keepopen
 {
-	clear:both;
+    clear:both;
+	font-size:12px;
 }
 div#body
 {
@@ -126,19 +127,10 @@ img#graph
 }
 
 /* when the screen is smaller, change the color*/
-
-@media screen and (max-width:975px) 
-{
-	div#container 
-	{
-		width:100%;
-	}
-	nav ul li a 
-	{
+@media screen and (max-width: 1200px) {
+	figure.product{
 		float:none;
-		text-align:center;
-	}
-	
+		margin:10px auto;
 }
 div#topic_grp
 {
@@ -174,6 +166,13 @@ figure.topic figcaption br
 {
 background-color:#d6d3f2;
 }
+ legend, span, input, textarea {
+		display:block;
+		margin:auto;
+		text-align:center;
+		font-family:sans-serif;
+		color:blue;
+	}
 /*
 .icon-bar
 {
